@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	/* font-size: 62.5%; */
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: linear-gradient(135deg, #fff6b7 10%, #fb416c 100%) no-repeat fixed;
+}
+
+/* Main styling */
+form {
+	width: 30rem;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20vh;
+	padding: 4rem;
+	background-image: linear-gradient(135deg, #feb692 10%, #ea5455 100%);
+	color: #fff;
+	border-radius: 10px;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+/* input container */
+.input-container {
+	position: relative;
+}
+
+/* input */
+.input-container input,
+input[type=submit] {
+	margin-bottom: 1rem;
+	border: none;
+	outline: none;
+	width: 100%;
+	background: transparent;
+	border-bottom: 0.1rem rgb(223, 150, 55) solid;
+}
+
+input[type=submit] {
+	border: .1rem transparent solid;
+	background-color: rgb(223, 150, 55);
+	border-radius: 5px;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus {
+	border: .1rem rgb(223, 150, 55) solid;
+	background-color: #fff;
+	color: rgb(223, 150, 55);
+}
+
+.input-container input,
+input[type=submit],
+.input-container label {
+	padding: 0.8rem;
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+/* label */
+.input-container label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	transition: all .45s ease-in-out;
+}
+
+/* Effect */
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+	top: -1rem;
+	left: 0;
+	font-size: 0.8rem;
+	color: #000;
+}
